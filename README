@@ -1,32 +1,9 @@
 data_structures_and_algorithms
 
-some oop knowledge:
-1. Encapsulation is when some things are private and some things public
-2. Abstraction is when only a few surface level things are public and the rest under the hood is private
-3. Inheritance is when you create a sub-class that has all the attributes of the parent class but with
-    it's own additional attributes
-4. Polymorphism happens when you add more attributes or functions to the constructors and methods of a
-    parent-class in a sub-class
-
-linked list: https://www.geeksforgeeks.org/program-to-implement-singly-linked-list-in-c-using-class/
-doubly linked list: https://www.geeksforgeeks.org/introduction-and-insertion-in-a-doubly-linked-list/
-hashtable: https://www.youtube.com/watch?v=nvzVHwrrub0
-    https://stackoverflow.com/questions/21420772/array-of-linked-lists-c
-    https://www.tutorialspoint.com/data_structures_algorithms/hash_data_structure.htm
-binary search tree:
-stack:
-queue:
-
-
 data structs to learn for ai:
-
-    Array
     Linked list
+    Hash table
+    Binary tree
     Stack
     Queue
-    Binary tree
-    Binary search tree
     Heap
-    Hashing
-    Graph
-    Matrix
