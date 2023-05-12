@@ -1,28 +1,81 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-typedef struct {
-    char letter;
-    struct List *next;
-} List;
+typedef struct Node {
+    char value;
+    struct Node *next;
+} Node;
 
-/*
- * size() - returns number of data elements in list
- * empty() - bool returns true if empty
- * value_at(index) - returns the value of the nth item (starting at 0 for first)
- * add_front(value) - adds an item to the front of the list
- * add_back(value) - adds an item at the end
- * pop_front() - remove front item and return its value
- * pop_back() - removes end item and returns its value
- * front() - get value of front item
- * back() - get value of end item
- * insert(index, value) - insert value at index, so current item at that index is pointed to by new item at index
- * erase(index) - removes node at given index
- * value_n_from_end(n) - returns the value of the node at nth position from the end of the list
- * reverse() - reverses the list
- * remove_value(value) - removes the first item in the list with this value
-*/
+int size(Node *);
+void printList(Node *);
+void insertFront(Node **, char);
+void insertEnd(Node **, char);
+void insert(Node *, int, char); /* todo */
+char valueAt(Node *, int); /* todo */
+void erase(Node *, int); /* todo */
+
+Node *reverse(Node *); /* todo */
+void eraseValue(Node *, char); /* todo */
+
+int size(Node *head) {
+    Node *tmp = head;
+    int len = 0;
+    while(tmp != NULL) {
+        len++;
+        tmp = tmp->next;
+    }
+
+    return len;
+}
+
+void printList(Node *head) {
+    Node *tmp = head;
+
+    while(tmp != NULL) {
+        printf("%c ", tmp->value);
+        tmp = tmp->next;
+    }
+
+    putchar('\n');
+}
+
+void insertFront(Node **head, char i_value) {
+    Node *newNode = malloc(sizeof(Node));
+    newNode->value = i_value;
+    newNode->next = *head;
+    *head = newNode;
+}
+
+void insertEnd(Node **head, char i_value) {
+    Node *newNode = malloc(sizeof(Node));
+    Node *tmp = *head;
+
+    newNode->value = i_value;
+    newNode->next = NULL;
+
+    if(*head == NULL) {
+        *head = newNode;
+        return;
+    }
+
+    while(tmp->next != NULL) {
+        tmp = tmp->next;
+    }
+
+    tmp->next = newNode;
+}
 
 int main() {
+    Node *head = NULL;
+    insertFront(&head, 'a');
+    insertEnd(&head, 'b');
+    insertEnd(&head, 'c');
+    insertFront(&head, 'a');
+
+    printList(head);
+    printf("%d\n", size(head));
+
+    free(head);
 
     return 0;
 }

@@ -1,9 +1,10 @@
-data_structures_and_algorithms
+### Data Structures and Algorithms
+Some notes and examples on common data structures and algorithms
 
-sources:
-https://github.com/jwasham/coding-interview-university#data-structures
+#### Sources
+* https://github.com/jwasham/coding-interview-university#data-structures
 
-data structs to learn for ai:
+#### Data structures
     Linked list
     Hash table
     Binary tree
