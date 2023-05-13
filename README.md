@@ -7,7 +7,7 @@ Some notes and examples on common data structures and algorithms
 #### Data structures
 * Linked list
 * Hash table
-* Binary tree
 * Stack
 * Queue
+* Binary tree
 * Heap
