@@ -10,4 +10,3 @@ Some notes and examples on common data structures and algorithms
 * Stack
 * Queue
 * Binary tree
-* Heap
