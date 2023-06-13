@@ -1,12 +1,16 @@
-### Data Structures and Algorithms
+## Data Structures and Algorithms
 Some notes and examples on common data structures and algorithms
 
-#### Sources
-* https://github.com/jwasham/coding-interview-university#data-structures
+### Sources
+- https://github.com/jwasham/coding-interview-university#data-structures
 
-#### Data structures
-* Linked list
-* Hash table
-* Stack
-* Queue
-* Binary tree
+### Data structures
+- Linked list
+- Hash table
+- Stack
+- Queue
+- Binary tree
+
+### Algorithms
+- Selection Sort
+- Bubble Sort
