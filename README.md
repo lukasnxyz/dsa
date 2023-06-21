@@ -3,6 +3,7 @@ Some notes and examples on common data structures and algorithms
 
 ### Sources
 - https://github.com/jwasham/coding-interview-university#data-structures
+- https://www.abenteuer-informatik.de/
 
 ### Data structures
 - [X] Linked list
