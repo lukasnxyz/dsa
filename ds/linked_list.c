@@ -7,9 +7,9 @@ typedef struct Node {
 } Node;
 
 int size(Node *);
-void printList(Node *);
-void insertFront(Node **, char);
-void insertEnd(Node **, char);
+void printList(Node *); //
+void insertFront(Node **, char); //
+void insertEnd(Node **, char); //
 void insert(Node **, int, char);
 char valueAt(Node *, int);
 void erase(Node *, int);

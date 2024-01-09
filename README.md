@@ -1,20 +1,18 @@
 ## Data Structures and Algorithms
-Some notes and examples on common data structures and algorithms
-
-### Sources
-- https://github.com/jwasham/coding-interview-university#data-structures
-- https://www.abenteuer-informatik.de/
+Data structures and sorting algorithms implemented in Go.
 
 ### Data structures
-- [X] Linked list
-- [X] Hash table
-- [X] Stack
-- [X] Queue
+- [ ] Linked list
+- [ ] Hash table
+- [ ] Stack
+- [ ] Queue
 - [ ] Binary tree
 
-### Algorithms
-- [X] Selection Sort
-- [X] Bubble Sort
+### Sorting algorithms
+- [ ] Selection Sort
+- [ ] Bubble Sort
 - [ ] Tournament Sort
 - [ ] Proxmap Sort
-- [ ] Binary Search
+
+### Other
+- [ ] Fizz buzz
