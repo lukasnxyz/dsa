@@ -10,10 +10,11 @@ type Node struct {
 }
 
 func (head *Node) Append(x int) {
-    new_node := &Node{x, nil}
+    newNode := &Node{x, nil}
 
     if head == nil {
-        head = new_node
+        head = newNode
+
         return
     }
 
@@ -23,19 +24,20 @@ func (head *Node) Append(x int) {
         tmp = tmp.next
     }
 
-    tmp.next = new_node
+    tmp.next = newNode
 }
 
-func (head *Node) Prepend(x int) {
+func (head *Node) Prepend(x int) (*Node) {
+    newNode := &Node{x, nil}
     if head == nil {
-        new_node := &Node{x: x, next: nil}
-        head = new_node
-
-        return
+        head = newNode
+        return head
     }
 
-    new_node := &Node{x: x, next: head}
-    head = new_node
+    newNode.next = head
+    head = newNode
+
+    return head
 }
 
 /*
@@ -55,13 +57,57 @@ func (head *Node) Print() {
 func main() {
     fmt.Println("Linked lists!")
 
-    head := Node{0, nil}
+    head := &Node{}
 
     head.Append(1)
     head.Append(2)
     head.Append(3)
     head.Append(4)
-    //head.Prepend(-1)
+
+    head = head.Prepend(-1)
 
     head.Print()
 }
+
+/*
+package main
+
+import "fmt"
+
+type List struct {
+    x    int
+    next *List
+}
+
+func NewList(x int, next *List) *List {
+    return &List{x, next}
+}
+
+func (l *List) Append(x int) {
+    now := l
+    for ; now.next != nil; now = now.next {
+    }
+
+    now.next = NewList(x, nil)
+}
+
+func (l *List) Prepend(x int) *List {
+    return NewList(x, l)
+}
+
+func (l *List) Print() {
+    for now := l; now != nil; now = now.next {
+        fmt.Printf("%d -> ", now.x)
+    }
+
+    fmt.Printf("nil\n")
+}
+
+func main() {
+    list := NewList(5, nil)
+    list.Append(6)
+    list.Append(7)
+    list.Print()
+    list = list.Prepend(4)
+    list.Print()
+}*/
