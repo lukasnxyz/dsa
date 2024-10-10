@@ -6,6 +6,9 @@ int main(void) {
   push(s, 2);
   push(s, 3);
   stack_print(s);
+  int p = pop(s);
+  printf("%d\n", p);
+  stack_print(s);
   stack_free(s);
 
   return 0;
