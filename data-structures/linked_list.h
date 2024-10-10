@@ -11,9 +11,14 @@ typedef struct node {
 
 void list_print(node_t *head);
 void list_append(node_t **head, int n_d);
+void list_free(node_t *head);
 
 void list_append(node_t **head, int n_d) {
   node_t *n_node = (node_t *)malloc(sizeof(node_t));
+  if (n_node == NULL) {
+    return;
+  }
+
   n_node->d = n_d;
   n_node->next = NULL;
 
@@ -36,6 +41,15 @@ void list_print(node_t *head) {
     current = current->next;
   }
   printf("\n");
+}
+
+void list_free(node_t *head) {
+  node_t *tmp;
+  while (head != NULL) {
+    tmp = head;
+    head = head->next;
+    free(tmp);
+  }
 }
 
 #endif // __LINKED_LIST__

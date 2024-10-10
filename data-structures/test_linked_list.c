@@ -8,5 +8,7 @@ int main(void) {
   list_append(&head, 30);
   list_print(head);
 
+  list_free(head);
+
   return 0;
 }
