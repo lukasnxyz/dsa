@@ -3,15 +3,15 @@ Just a collection of data structures and algorithms that have been mentioned in 
 that I've implemented for practice and understanding.
 
 #### Implemented
-| **Data Structures** |
-| ------------------- |
-| Linked List         |
-| Queue               |
-| Stack               |
+| Data Structures |
+| --------------- |
+| - Linked List   |
+| - Queue         |
+| - Stack         |
 
-| **Algorithms** |
-| -------------- |
-| Binary Search  |
-| Insertion Sort |
-| Merge Sort     |
-| Fibonacci      |
+| Algorithms       |
+| ---------------- |
+| - Binary Search  |
+| - Insertion Sort |
+| - Merge Sort     |
+| - Fibonacci      |
