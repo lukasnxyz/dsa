@@ -1,3 +1,6 @@
+#ifndef __INSERTION_SORT_H_
+#define __INSERTION_SORT_H_
+
 #include <stdio.h>
 
 void insertion_sort(int *a, size_t n);
@@ -13,3 +16,5 @@ void insertion_sort(int *a, size_t n) {
     a[j+1] = h;
   }
 }
+
+#endif // __INSERTION_SORT_H_

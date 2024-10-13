@@ -1,5 +1,5 @@
-#ifndef __LINKED_LIST__
-#define __LINKED_LIST__
+#ifndef __LINKED_LIST_H__
+#define __LINKED_LIST_H__
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -52,4 +52,4 @@ void list_free(node_t *head) {
   }
 }
 
-#endif // __LINKED_LIST__
+#endif // __LINKED_LIST_H__
