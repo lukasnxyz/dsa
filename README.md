@@ -9,9 +9,25 @@ that I've implemented for practice and understanding.
 | - Queue         |
 | - Stack         |
 
-| Algorithms       |
-| ---------------- |
-| - Binary Search  |
-| - Insertion Sort |
-| - Merge Sort     |
-| - Fibonacci      |
+| Sorting Algorithms |
+| ------------------ |
+| - Insertion Sort   |
+| - Merge Sort       |
+
+| Search Algorithms |
+| ----------------- |
+| - Binary Search   |
+| - Fibonacci       |
+
+
+
+Todo:
+- Radix sort
+- Quick sort
+- Interpolation search
+- Fast search
+- heap sort
+
+- Heap + heapify
+- Binary tree
+- hash table

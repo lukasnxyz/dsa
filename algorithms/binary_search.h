@@ -3,7 +3,11 @@
 
 #include <stddef.h>
 
-// O(log n)
+/* Binary search
+ * - O(log n)
+ * - very common, even included in C stdlib as bsearch
+ * - similar to how a human would search through a paper dictionary
+ */
 
 size_t binary_search(int arr[], size_t n, int x);
 
