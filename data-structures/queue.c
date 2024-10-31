@@ -1,6 +1,3 @@
-#ifndef __QUEUE_H__
-#define __QUEUE_H__
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,12 +5,6 @@ typedef struct queue {
   int *queue_arr;
   size_t len;
 } queue_t;
-
-queue_t *queue_init(void);
-void queue_free(queue_t *s);
-void queue_print(queue_t *s);
-void enqueue(queue_t *s, int d);
-int dequeue(queue_t *s);
 
 queue_t *queue_init(void) {
   queue_t *s = (queue_t *)malloc(sizeof(queue_t));
@@ -72,4 +63,17 @@ int dequeue(queue_t *s) {
   return d;
 }
 
-#endif // __QUEUE_H__
+int main(void) {
+  queue_t *q = queue_init();
+  enqueue(q, 1);
+  enqueue(q, 2);
+  enqueue(q, 3);
+  enqueue(q, 4);
+  queue_print(q);
+  int d = dequeue(q);
+  printf("%d\n", d);
+  queue_print(q);
+  queue_free(q);
+
+  return 0;
+}

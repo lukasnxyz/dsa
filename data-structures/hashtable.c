@@ -1,12 +1,6 @@
-#ifndef __HASH_TABLE_H__
-#define __HASH_TABLE_H__
-
+#include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-
-/* Hash table
- * - basically arrays that are indexed via hash functions
- */
 
 typedef struct {
   const char *key;
@@ -46,7 +40,6 @@ void ht_destroy(ht *table) {
   free(table);
 }
 
-
 void *ht_get(ht *table, const char *key);
 const char *ht_set(ht *table, const char *key, void *value);
 size_t ht_length(ht *table);
@@ -63,4 +56,47 @@ hti ht_iterator(ht *table);
 bool ht_next(hti *it);
 
 
-#endif /* __HASH_TABLE_H__ */
+
+
+
+void exit_nomem(void) {
+  fprintf(stderr, "out of memory!\n");
+  exit(1);
+}
+
+int main(void) {
+  ht *counts = ht_create();
+  if (counts == NULL) {
+    exit_nomem();
+  }
+
+  char word[101];
+  while (scanf("%100s", word) != EOF) {
+    void *value = ht_get(counts, word);
+    if (value != NULL) {
+      int *pcount = (int *)value;
+      (*pcount)++;
+      continue;
+    }
+
+    int *pcount = malloc(sizeof(int));
+    if (pcount == NULL) {
+      exit_nomem();
+    }
+    *pcount = 1;
+    if (ht_set(counts, word, pcount) == NULL) {
+      exit_nomem();
+    }
+  }
+
+  hti it = ht_iterator(counts);
+  while (ht_next(&it)) {
+    printf("%s %sd\n", it.key, *(int *)it.value);
+    free(it.value);
+  }
+
+  printf("%d\n", (int)ht_length(counts));
+
+  ht_destroy(counts);
+  return 0;
+}

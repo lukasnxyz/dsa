@@ -1,6 +1,3 @@
-#ifndef __LINKED_LIST_H__
-#define __LINKED_LIST_H__
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,10 +5,6 @@ typedef struct node {
   int d;
   struct node *next;
 } node_t;
-
-void list_print(node_t *head);
-void list_append(node_t **head, int n_d);
-void list_free(node_t *head);
 
 void list_append(node_t **head, int n_d) {
   node_t *n_node = (node_t *)malloc(sizeof(node_t));
@@ -52,4 +45,14 @@ void list_free(node_t *head) {
   }
 }
 
-#endif // __LINKED_LIST_H__
+int main(void) {
+  node_t *head = NULL;
+  list_append(&head, 10);
+  list_append(&head, 20);
+  list_append(&head, 30);
+  list_print(head);
+
+  list_free(head);
+
+  return 0;
+}

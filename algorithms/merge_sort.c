@@ -1,13 +1,4 @@
-#ifndef __MERGE_SORT_H__
-#define __MERGE_SORT_H__
-
 #include <stdio.h>
-
-// O(n log n)
-
-void merge(int arr[], size_t left, size_t mid, size_t right);
-void merge_sort(int arr[], size_t left, size_t right);
-void print_array(int arr[], size_t n);
 
 void merge(int arr[], size_t left, size_t mid, size_t right) {
     size_t i, j, k;
@@ -69,4 +60,17 @@ void print_array(int arr[], size_t n) {
     puts("\n");
 }
 
-#endif // __MERGE_SORT_H__
+int main(void) {
+    int arr[] = {38, 27, 43, 3, 9, 82, 10};
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
+
+    printf("Given array is \n");
+    print_array(arr, arr_size);
+
+    merge_sort(arr, 0, arr_size - 1);
+
+    printf("Sorted array is \n");
+    print_array(arr, arr_size);
+
+    return 0;
+}
