@@ -2,7 +2,6 @@ class Node:
   def __init__(self, data: int):
     self.data: int = data
     self.next: Node = None
-  
 
 class LL:
   def __init__(self):

@@ -7,14 +7,16 @@ that I've implemented for practice and understanding.
 - [X] Linked List
 - [X] Queue
 - [X] Stack
-- [ ] Binary Tree
-- [ ] Hash Table
 - [ ] Heap + Heapify
+- [ ] Binary Tree
+- [X] Binary Search Tree
+- [ ] Hash Table
+- [ ] 2-4 Tree
 
 - [X] Fibonacci
 - [X] Binary Search
+- [X] Interpolation Search
 - [ ] Fast Search
-- [ ] Interpolation Search
 
 - [X] Insertion Sort
 - [X] Bubble Sort
