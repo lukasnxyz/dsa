@@ -21,7 +21,7 @@ that I've implemented for practice and understanding.
 - [X] Insertion Sort
 - [X] Bubble Sort
 - [ ] Heap Sort
-- [ ] Merge Sort (DAQ)
+- [X] Merge Sort (DAQ)
 - [ ] Quick Sort (DAQ)
 - [ ] B-sort
 - [ ] Radix sort

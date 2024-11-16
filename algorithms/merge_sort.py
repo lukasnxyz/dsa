@@ -1,38 +1,24 @@
-#def merge(l: list, r: list):
-#  n = len(l) + len(r)
-#  R = []
-#  il, ir = 0, 0
-#
-#  for i in range(n):
-#    if l[il] <= r[ir]:
-#      R.append(l[il])
-#      il += 1
-#    else:
-#      R.append(r[ir])
-#      ir += 1
-#
-#  return R
+def merge(l, r):
+  res = []
+  i, j = 0, 0
 
-def merge(left, right):
-    result = []
-    i, j = 0, 0
-    
-    # Compare elements from both lists and add the smaller one to the result
-    while i < len(left) and j < len(right):
-        if left[i] <= right[j]:
-            result.append(left[i])
-            i += 1
-        else:
-            result.append(right[j])
-            j += 1
-    
-    # Add any remaining elements from left list
-    result.extend(left[i:])
-    
-    # Add any remaining elements from right list
-    result.extend(right[j:])
-    
-    return result
+  while i < len(l) and j < len(r):
+    if l[i] <= r[j]:
+      res.append(l[i])
+      i += 1
+    else:
+      res.append(r[j])
+      j += 1
+
+  while i < len(l):
+    res.append(l[i])
+    i += 1
+
+  while j < len(r):
+    res.append(r[j])
+    j += 1
+
+  return res
 
 def merge_sort(A: list):
   n = len(A)
@@ -53,5 +39,5 @@ if __name__ == "__main__":
   A = [3, 5, 1, 8, 189, 39, 18, 238, 2, 9, 69]
 
   print("before:", A)
-  merge_sort(A)
+  A = merge_sort(A)
   print("after:", A)

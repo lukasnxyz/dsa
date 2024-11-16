@@ -23,5 +23,5 @@ if __name__ == "__main__":
   A = [3, 5, 1, 8, 189, 39, 18, 238, 2, 9, 69]
 
   print("before:", A)
-  quick_sort(A)
+  A = quick_sort(A)
   print("after:", A)
