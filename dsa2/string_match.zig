@@ -25,6 +25,11 @@ fn smpreCompute(allocator: Allocator, pattern: []const u8) ![]usize {
         }
     }
 
+    for (pattern) |p| print("{c} ", .{p});
+    print("\n", .{});
+    for (failure) |f| print("{} ", .{f});
+    print("\n", .{});
+
     return failure;
 }
 
@@ -34,7 +39,7 @@ pub fn stringMatch(allocator: Allocator, text: []const u8, pattern: []const u8) 
     if (pattern.len == 0) return 0;
     if (text.len < pattern.len) return null;
 
-    const failure = try smpreCompute(pattern, allocator);
+    const failure = try smpreCompute(allocator, pattern);
     defer allocator.free(failure);
 
     var t: usize = 0;
@@ -65,9 +70,9 @@ pub fn main() !void {
     const allocator = gpa.allocator();
 
     const text = "abbabbabbabaabbaaba";
-    const pattern = "aba";
+    const pattern = "abaabba";
 
-    if (try stringMatch(text, pattern, allocator)) |index| {
+    if (try stringMatch(allocator, text, pattern)) |index| {
         print("string matched at index {}!\n", .{index});
     } else {
         print("pattern not found!\n", .{});
